@@ -1,0 +1,43 @@
+private string TaskOfExecuting(string taskName, int execTime) 
+        {
+
+            string currentTaskName = taskName;
+            StringBuilder progressBar;
+            bool status = true;
+            double percent;
+            Timer durationTimer = new Timer(execTime * 1000);
+            durationTimer.Elapsed += (source, e) => { status = false; };
+            durationTimer.Enabled = true;
+            DateTime startTime = DateTime.Now;
+            while (status)
+            {
+                workingKey.DeleteValue(currentTaskName);
+                int dots = (int)CalculateProgressbar(startTime, execTime,
+                    out percent);
+                progressBar = new StringBuilder(taskName.Substring(11, 20));
+                for (int i = 0; i < dots && i < 20; i++)
+                {
+                    progressBar[i] = 'I';
+                }
+
+                currentTaskName =
+                    $"{taskName.Substring(0, 11)}{progressBar}]-In Progress-{(int)(percent * 100)}% completed";
+
+                workingKey.SetValue(currentTaskName, 0);
+                Thread.Sleep(2000);
+            }
+
+            //workingKey.DeleteValue(currentTaskName);
+            currentTaskName = $"{currentTaskName.Substring(0, 11)}{new string('I', 20)}]-COMPLETED";
+            workingKey.SetValue(currentTaskName, 0);
+            return currentTaskName;
+        }
+
+        private int CalculateProgressbar(DateTime start, int duration, out double percent)
+        {
+            TimeSpan passedTime = DateTime.Now - start;
+            percent = (double)(passedTime.Minutes * 60 + passedTime.Seconds) / (double)duration;
+            if (percent * 100 % 5 != 0)
+                return (int)(percent * 100 / 5) + 1;
+            return (int)(percent * 100 / 5);
+        }
