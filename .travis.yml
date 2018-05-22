@@ -1,0 +1,9 @@
+language: generic
+deploy:
+  provider: s3
+  access_key_id: AKIAJV3IE2U53LZJCFVQ
+  secret_access_key: 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
+  bucket: labVorontsov
+  on:
+    repo: VitaliyVorontsov/hello-world
+  acl: public_read
