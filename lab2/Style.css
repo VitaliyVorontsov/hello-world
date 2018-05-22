@@ -1,0 +1,114 @@
+*{/*Убираем все рамки на всякий случай*/
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+body {
+	font-family: Arial, sans-serif;
+	background-color: #fff;
+	margin: 0;
+}
+.main{
+	margin: auto;
+	width: 900px;
+	display: grid;
+	grid-template-columns: auto auto auto; /* shirina kolonok v formate 1  2 3 kolonka po poriadku */
+	grid-template-rows: 200px 200px 524px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
+}
+.main div{
+	border: 1px solid black; /* mozno ubrat' esli zahotet' , sdelal dlia nagliadnosti */
+	padding: 2rem;
+}
+/*  nie trogat' */
+.block1{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	overflow: auto;
+	background-color: #FF0000;
+}
+.block2{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	overflow: auto;
+	background-color: #B22222
+}
+.block3{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	overflow: auto;
+	background-color: #228B22;
+}
+.block4{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	overflow: auto;
+	background-color: #008080;
+}
+.block5{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	overflow: auto;
+	background-color: #00BFFF;
+}
+/* */
+.footer{
+	height: 50px;
+	width: auto;
+	background-color: #afa;
+}
+
+@media only screen and (max-width: 750px)    {
+	.block1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    overflow: auto;
+    background-color: #FF0000;
+	}
+	.block2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+    overflow: auto;
+    background-color: #B22222
+	}
+	.block3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+    overflow: auto;
+    background-color: #228B22;
+	}
+	.block4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+		grid-row-start: 5;
+	grid-row-end: 6;
+    overflow: auto;
+    background-color: #008080;
+	}
+	.block5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+		grid-row-start: 7;
+	grid-row-end: 8;
+    overflow: auto;
+    background-color: #00BFFF;
+	}
+	.footer{
+	margin: auto;
+	width: 900px;
+	display: grid;
+	grid-template-columns: auto auto auto; /* shirina kolonok v formate 1  2 3 kolonka po poriadku */
+	grid-template-rows: 200px 200px 524px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
+	text-align: center;
+}
+}
