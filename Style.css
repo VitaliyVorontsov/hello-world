@@ -64,7 +64,7 @@ body {
 	background-color: #afa;
 }
 
-@media only screen and (max-width: 750px)    {
+@media only screen and (max-width: 900px)    {
 	.block1 {
     grid-column-start: 1;
     grid-column-end: 4;
