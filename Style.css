@@ -8,12 +8,13 @@ body {
 	background-color: #fff;
 	margin: 0;
 }
+
 .main{
 	margin: auto;
 	width: 900px;
 	display: grid;
 	grid-template-columns: auto auto auto; /* shirina kolonok v formate 1  2 3 kolonka po poriadku */
-	grid-template-rows: 200px 200px 524px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
+	grid-template-rows: 200px 200px 400px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
 }
 .main div{
 	border: 1px solid black; /* mozno ubrat' esli zahotet' , sdelal dlia nagliadnosti */
@@ -59,11 +60,25 @@ body {
 }
 /* */
 .footer{
-	height: 50px;
+	height: calc(100vh - 800px);
 	width: auto;
 	background-color: #afa;
 }
 
+@media only screen and (max-width: 1450px)    {
+	.main{
+	margin: auto;
+	width: 900px;
+	display: grid;
+	grid-template-columns: auto auto auto; /* shirina kolonok v formate 1  2 3 kolonka po poriadku */
+	grid-template-rows: 130px 130px 260px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
+	}
+	.footer{
+	height: calc(100vh - 520px);
+	width: auto;
+	background-color: #afa;
+}
+}
 @media only screen and (max-width: 900px)    {
 	.block1 {
     grid-column-start: 1;
