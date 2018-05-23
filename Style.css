@@ -14,7 +14,7 @@ body {
 	width: 900px;
 	display: grid;
 	grid-template-columns: auto auto auto; /* shirina kolonok v formate 1  2 3 kolonka po poriadku */
-	grid-template-rows: 200px 200px 400px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
+	grid-template-rows: 170px 170px 340px; /* visota kolonok v formate 1  2 3 kolonka po poriadku */
 }
 .main div{
 	border: 1px solid black; /* mozno ubrat' esli zahotet' , sdelal dlia nagliadnosti */
@@ -60,7 +60,7 @@ body {
 }
 /* */
 .footer{
-	height: calc(100vh - 800px);
+	height: calc(100vh - 680px);
 	width: auto;
 	background-color: #afa;
 }
