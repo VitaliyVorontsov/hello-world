@@ -83,7 +83,7 @@ body {
 }
 /* */
 .footer{
-	height: calc(100vh - 534px);
+	height: calc(100vh - 532px);
 	width: auto;
 	background-color: #afa;
 }
