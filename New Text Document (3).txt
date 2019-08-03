@@ -1,0 +1,60 @@
+
+#include <stdio.h>
+
+int F1(int x, int y)
+{
+    return 2 * x - y;
+}
+int F2(int x, int y)
+{
+        return x*y;
+}
+
+int F3(int x, int y,int f1, int f2)
+{
+        return 5 * f1 - 2 * f2;
+}
+
+
+
+int F4(int f3)
+{
+        return 8 * f3 - 6;
+}
+
+
+#include <stdio.h>
+int main() {
+
+int x=2;
+int y=7;
+    int r=F4(F3((x, y,F1(x,y), F2(x,y))));
+    printf("%d\n",r);
+    return 0;
+}
+
+        public int F1(int x, int y)
+        { 
+            return 2 * x - y; 
+        }
+        public static int F2(int x, int y)
+        {
+            return x*y;
+        }
+        public int F3(int x, int y)
+        {
+
+            return 5 * F1(x, y) - 2 * KI3_Class_2.F2(x, y);
+        }
+        public static int F4(int x, int y)
+        {
+            KI3_Class_3 obj = new KI3_Class_3();    
+            return 8 * obj.F3(x, y) - 6;
+        }
+
+int res = KI3_Class_4.F4(x,y);
+
+
+
+
+
